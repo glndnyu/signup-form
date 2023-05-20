@@ -1,0 +1,235 @@
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #c1e7ff;
+  --image-panel: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #c1e7ff;
+    --color-fg: #ffffff;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: Ubuntu;
+}
+
+.image-panel {
+  position: relative;
+  background-image: url("imgs/pexels-photo-1212600.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: var(--image-panel);
+  flex-shrink: 1;
+}
+
+.image-panel footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.image-panel div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10rem;
+  background-color: rgba(250, 235, 215, 0.5);
+  width: 100%;
+  padding: 1rem;
+}
+
+.image-panel img {
+  width: 180px; 
+  height: auto;  
+}
+
+.form-panel {
+  width: calc(100vw - var(--image-panel));
+  flex-shrink: 3;
+}
+
+.form-panel > section {
+  padding: 2.5rem 7.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: max(calc(65% - 1rem), 200px);
+  height: 1.75rem;
+  border-radius: 5px;
+  border: none;
+  padding: .5rem;
+  margin-top: .5rem;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-fg);
+}
+
+input:focus {
+  box-shadow: #afafaf 2px 2px 2px 1px;
+  outline: none;
+}
+
+
+.input-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.input-container > div {
+  width: calc(50% - 1rem);
+  height: 5rem;
+}
+
+label {
+  display: block;
+  width: fit-content;
+}
+
+legend {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+fieldset {
+  border: none;
+}
+
+section:nth-child(2) {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -2px 4px 2px, rgba(0, 0, 0, 0.35) 0px 2px 4px 2px;
+}
+
+.header {
+  width: 90%;
+}
+
+section p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.75rem;
+}
+
+.header > p:nth-child(3) {
+  margin-top: 2rem;
+}
+
+.footer {
+  margin-top: 2rem;
+}
+
+.footer > * {
+  margin: .5rem 0;
+}
+
+/* CSS */
+button {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+button:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+button + p{
+  font-size: .75rem;
+}
+
+
+/* For invalid input */
+
+.error-message {
+  display: none;
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+  width: calc(65% - 1rem);
+}
+
+.error-message.show {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 13px;
+  }
+
+  .input-container {
+    flex-flow: column nowrap;
+  }
+
+  .input-container > div {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 1200px){
+  body {
+    flex-direction: column;
+  }
+  .image-panel, 
+  .form-panel {
+    width: 100%;
+  }
+
+  .image-panel {
+    padding: 2rem;
+  }
+
+  .image-panel > div {
+    position: static;
+    background-color: #afafaf00;
+    width: 100%
+  }
+  .image-panel > footer {
+    text-align: right;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .form-panel{
+    height: 70%
+  }
+}
