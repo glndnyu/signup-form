@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="image-panel">
+    <div>
+      <img src="imgs/LogoMakr-2whD5k.png" alt="Odin Logo">
+    </div>
+    <footer>
+      <span><em>Photo by <a href="https://www.pexels.com/@lazybird/">Sasha Martynov</a> on <a href="https://www.pexels.com/photo/calm-blue-sea-during-golden-hour-1212600/">Pexels</a></em></span>
+    </footer>
+  </div>
+  <div  class="form-panel">
+    <section>
+      <div class="header">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+        <p>Sign up now to get started.</p>
+        <p>You know you want to!</p>
+      </div>
+    </section>
+    <section>
+        <form id="form" action="" novalidate>
+          <fieldset>
+            <legend><em>Let's do this!</em></legend>
+            <div class="input-container">
+              <div>
+                <label for="first-name">First Name</label>
+                <input class="input" type="text" id="first-name" name="first-name" placeholder="" required>
+                <span class="error-message"></span>
+              </div>
+              <div>
+                <label for="last-name">Last Name</label>
+                <input class="input" type="text" id="last-name" name="last-name" placeholder="" required>
+                <span class="error-message"></span>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input class="input" type="email" id="email" name="email" placeholder="name@example.com" required>
+                <span class="error-message"></span>
+              </div>
+              <div>
+                <label for="phone-number">Phone Number</label>
+                <input class="input" type="tel" id="phone-number" name="phone-number" placeholder="xxx-xxxx-xxxx" maxlength="13" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+                <span class="error-message"></span>
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <input class="input" type="password" id="password" name="password" maxlength="12" required>
+                <span class="password error-message"></span>
+              </div>
+              <div>
+                <label for="confirm-password">Confirm Password</label>
+                <input class="input" type="password" id="confirm-password" name="password" maxlength="12" required>
+                <span class="password error-message"></span>
+              </div>
+            </div>
+          </fieldset>
+          <div class="footer">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Sign in</a></p>
+          </div>
+        </form>
+    </section>
+  </div>
+</body>
+</html>
