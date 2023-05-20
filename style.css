@@ -202,6 +202,10 @@ button + p{
   .input-container > div {
     width: 100%;
   }
+
+  .form-panel > section {
+    padding: 2.5rem 2.5rem;
+}
   
 }
 
