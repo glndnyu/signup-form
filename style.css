@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #ffffff;
+  --color-bg: #222222;
   --color-fg: #c1e7ff;
   --image-panel: 500px;
 }
@@ -7,7 +7,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #c1e7ff;
-    --color-fg: #ffffff;
+    --color-fg: #222222;
   }
 }
 
